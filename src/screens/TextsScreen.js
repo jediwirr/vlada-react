@@ -22,8 +22,8 @@ const Texts = () => {
                 <div className="Texts-menu">
                     {
                         !data ? 'Loading... ' :
-                        data.map(item => (
-                            <p onClick={() => setTitle(item.title)}>2.	{item.title}</p>
+                        data.map((item, i) => (
+                            <p onClick={() => setTitle(item.title)}>{i + 1}. {item.title}</p>
                         ))
                     }
                 </div>
