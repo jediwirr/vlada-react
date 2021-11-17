@@ -38,7 +38,7 @@ const Slider = ({paths, video}) => {
                     <iframe width="100%" height="100%" src={paths[index]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div> :
                <div className="Slide">
-                    <img src={`./images/${paths[index]}.jpg`} alt="slide"></img>
+                    <img src={paths[index]} alt="slide"></img>
                 </div>
             }
             <div className="Arrow" style={isNextShown ? {opacity: 1} : {opacity: 0}} onClick={nextSlide}>FORWARD</div>

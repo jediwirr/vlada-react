@@ -5,7 +5,7 @@ const AboutMain = ({data}) => {
     return (
         <div className="About-main">
             <div className="Portrait">
-                <img src="../images/photo_main.jpg" alt="portrait"/>
+                <img src="https://lh3.googleusercontent.com/0u6N71QH_TK3BYbHidX5HeUD6tZzqS2c-ssootH4hXoTayySD6gsVK8s5ef9ShB3tJPKX9-u63GcLqosiL9oSZjg8H6e5W6fOVoaOqND4h4K22WOTFAaGI3ZPr9Mrkk8lL0aSHJ2ivUVRd0SqX_tITwXbwBfZzabdaSGpuBk8IssvPUcWblNk_esikhDl17AAoN5UbjBXJ2vP9yX4iAgdvtFxsQ5XOwrgWTh5H70CoOrCceIKgALVKH2ByQvC__J9UwZLgVKj2dgAtzPdX_Q8LwmC5dZxym0jV3u0bk6xirVgkjUyefwPnNTdXLFQKPIl7AxVtAHPiRxCTz7wiqN7QxMn00xcB658bylHLzGx9Lkyruq0rku9No09p1XBg3N7ND410TOmYg63h7OTTsuZZ05ia4qBv_EZvgxhCQIv9oKG1aCLQApOd-y3HtMAhcCv1dKK9tNuMRMay9haYtX9i-ppYWtfIrJeUAhyOIIk2_TpFKDMW6gtMQeGF_LBukUkITC1J3nABrdkVGYcZ38MyYV2lPNmzYX7JO7Wnn6l979ZI_K-dEsdDRUpEWMtNdwwKjz8lbZDEQYPo7A9REQPDink85Hpyh7aaHp-LT-GcsIkQc0jVfs8PXzThtJhuXz7-BMtA_XAp5US7Ciki-r7BkeABvL62DagNsbi0K56sch-B5dlUrB9s2RFRNA5LmzRej2FJna5Dintvm0MKCuI1Q=s600-no?authuser=0" alt="portrait"/>
             </div>
 
             <div>

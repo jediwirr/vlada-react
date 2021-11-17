@@ -9,7 +9,7 @@ import {
 import BlueGreen from './screens/BlueGreen';
 import Country from './screens/Country';
 import Pastel from './screens/Pastel';
-import BlueLights from './components/BlueLights';
+import BlueLights from './screens/BlueLights';
 import Dostoevsky from './screens/Dostoevsky';
 import ZinVlada from './screens/ZinVlada';
 import Noise from './screens/Noise';
