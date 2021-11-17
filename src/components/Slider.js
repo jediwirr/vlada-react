@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
 
 const Slider = ({paths, video}) => {
     const [index, setIndex] = useState(0);
@@ -31,7 +32,7 @@ const Slider = ({paths, video}) => {
     
     return (
         <div className="Slider">
-            <div className="Arrow" style={isPrevShown ? {opacity: 1} : {opacity: 0}} onClick={prevSlide}>BACK</div>
+            <div className="Arrow" style={isPrevShown ? {opacity: 1} : {opacity: 0}} onClick={prevSlide}><HiChevronLeft /></div>
             {
                 video ?
                 <div className="Slide">
@@ -41,7 +42,7 @@ const Slider = ({paths, video}) => {
                     <img src={paths[index]} alt="slide"></img>
                 </div>
             }
-            <div className="Arrow" style={isNextShown ? {opacity: 1} : {opacity: 0}} onClick={nextSlide}>FORWARD</div>
+            <div className="Arrow" style={isNextShown ? {opacity: 1} : {opacity: 0}} onClick={nextSlide}><HiChevronRight /></div>
         </div>
 )
 }
