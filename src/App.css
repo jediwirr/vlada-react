@@ -139,6 +139,9 @@ a {
   font-size: 3em;
   color:#c4c6ca;
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -223,6 +226,11 @@ a {
 @media screen and (max-width: 600px) {
   .Slider {
     flex-direction: column;
+  }
+
+  .Arrow {
+    width: 100%;
+    justify-content: center;
   }
 }
 
