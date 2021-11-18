@@ -162,7 +162,6 @@ a {
 .Texts-content {
   padding: 0 8em;
   width: 50vw;
-  margin-left: 5em;
   flex-grow: 1;
   padding-left: 3em;
   border-left: rgb(192, 192, 192) solid 1px;
@@ -174,4 +173,62 @@ a {
 
 .Title {
   font-weight: bold;
+}
+
+
+
+.MenuSideBar {
+  display: flex;
+  align-items: center;
+  font-size: 5em;
+  opacity: .3;
+  color: rgb(127, 131, 131);
+}
+
+/* .MenuSideBar:hover {
+  opacity: 1;
+  font-size: 8em;
+} */
+
+
+@media screen and (max-width: 1290px) {
+  .Menu {
+    flex-direction: column;
+  }
+
+  .Menu a {
+    padding: .5em 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Photo-main {
+    width: 100%;
+  }
+
+  .About-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .About-main h1 {
+    text-align: center;
+  }
+
+  .Portrait {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Slider {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Texts-content {
+    padding: .2em;
+    padding-left: 1em;
+  }
 }

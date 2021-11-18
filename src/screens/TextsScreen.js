@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Gallery from '../components/Gallery';
+import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
 
 const Texts = () => {
     const [data, setData] = useState([]);
     const [title, setTitle] = useState('');
+    const [isShown, setIsShown] = useState(true);
 
     useEffect(() => {
         fetch('https://gimnazist.herokuapp.com/api/novels/')
@@ -13,21 +15,35 @@ const Texts = () => {
           setData(response)
         })
         .catch(error => console.log(error))
-      }, [])
+      }, []);
+
+    const toggleMenu = (title) => {
+        setTitle(title)
+        setIsShown(!isShown)
+    }
 
     return (
         <div className="Gallery">
             <Gallery />
             <div className="Texts">
-                <div className="Texts-menu">
+                {
+                    isShown ?
+                    <div className="Texts-menu">
                     {
                         !data ? 'Loading... ' :
                         data.map((item, i) => (
-                            <p onClick={() => setTitle(item.title)}>{i + 1}. {item.title}</p>
+                            <p onClick={() => toggleMenu(item.title)}>{i + 1}. {item.title}</p>
                         ))
                     }
+                </div> : <></>
+                }
+                <div className="MenuSideBar" onClick={() => setIsShown(!isShown)}>
+                    {isShown ? <HiChevronLeft /> : <HiChevronRight />}
                 </div>
-                <div className="Texts-content">
+                {
+                    isShown ?
+                    <></> :
+                    <div className="Texts-content">
                     {
                         !data ? 'Loading... ' :
                         data.map(item => (
@@ -41,7 +57,8 @@ const Texts = () => {
                             </>
                         ))
                     }
-                    </div>
+                </div>
+                }
         </div>
         </div>
     )
