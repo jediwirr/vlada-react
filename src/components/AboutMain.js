@@ -5,7 +5,7 @@ const AboutMain = ({data}) => {
     return (
         <div className="About-main">
             <div className="Portrait">
-                <img src="https://photos.app.goo.gl/BU5XQswGemNkZyuf7" alt="portrait"/>
+                <img src="https://lh3.googleusercontent.com/pw/AM-JKLX7dTZ6AGUuiFGKrfjlsseFpngFggqCcscMfe9-DkD5qmoII9XKK478vHg5YXwqMzhgnBxF4-NmpBpAiL27V84I_gVZZvdfc2RKLmNIEOuhqwLqHsKOGIJMVAN_2352DrRSXRNFYNiDse1ZgpARLphO=s600-no?authuser=0" alt="portrait"/>
             </div>
 
             <div>
