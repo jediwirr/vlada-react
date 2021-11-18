@@ -14,6 +14,7 @@ const Menu = () => {
         <Link to="/bluegreen">ГОЛУБО-ЗЕЛЁНЫЙ</Link>
         <Link to="/country">ДАЧА</Link>
         <Link to="/pastel">ПАСТЕЛЬ</Link>
+        <Link to="/pasteltwo">ПАСТЕЛЬ 2</Link>
         <Link to="/" onClick={toggleSubMenu}>НАЗАД</Link>
     </div>
   )

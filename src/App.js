@@ -16,6 +16,7 @@ import Noise from './screens/Noise';
 import Portraits from './screens/Portraits';
 import About from './screens/About';
 import Texts from './screens/TextsScreen';
+import PastelTwo from './screens/PastelTwo';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
             <Route path="/portraits" element={<Portraits />} />
             <Route path="/about" element={<About />} />
             <Route path="/texts" element={<Texts />} />
+            <Route path="/pasteltwo" element={<PastelTwo />} />
           </Routes>
       </div>
     </BrowserRouter>
