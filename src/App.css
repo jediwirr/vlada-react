@@ -155,7 +155,7 @@ a {
 
 .Texts-menu {
   margin-right: 2em;
-  margin-left: 2em;
+  margin-left: 8em;
 }
 
 .Texts-menu p {
@@ -164,10 +164,11 @@ a {
 
 .Texts-content {
   padding: 0 8em;
+  margin-left: 3em;;
   width: 50vw;
   flex-grow: 1;
-  padding-left: 3em;
-  border-left: rgb(192, 192, 192) solid 1px;
+  /* padding-left: 3em; */
+  /* border-left: rgb(192, 192, 192) solid 1px; */
 }
 
 .Texts-content p {
@@ -179,20 +180,24 @@ a {
 }
 
 
-
 .MenuSideBar {
+  /* padding: 0 .5em; */
+  position: fixed;
   display: flex;
   align-items: center;
-  font-size: 5em;
+  font-size: 3em;
   opacity: .3;
   color: rgb(127, 131, 131);
+  cursor: pointer;
+  height: 100%;
 }
 
-/* .MenuSideBar:hover {
-  opacity: 1;
-  font-size: 8em;
-} */
+.MenuSideBar:hover {
+    background-color: #e3e5e7;
+}
 
+
+/* RESPONSIVE */
 
 @media screen and (max-width: 1290px) {
   .Menu {
