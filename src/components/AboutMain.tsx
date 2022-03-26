@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 
-const AboutMain = ({data}) => {
+const AboutMain: FC = () => {
 
     return (
         <div className="About-main">

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Gallery from '../components/Gallery';
 import Slider from '../components/Slider';
 
-const Pastel = () => {
-    const paths = [
+const Pastel: FC = () => {
+    const paths: string[] = [
         'https://lh3.googleusercontent.com/pw/AM-JKLWCjtkTLZHBrggZTutD_Dz9zn9pC7_ChbQoFnD8cjqIVmg0PMOxmKskcI7HZbcZcdoIzHHb_TjWGBd4AnNuInqBO3sWtAuVDAj-d5o0RGgp5_GEmCYElduAjSshZEOAqx__YXCCLDfZqWCitMN8Z-5X=w1469-h979-no?authuser=0',
 
         'https://lh3.googleusercontent.com/pw/AM-JKLXOeVsRCC0xK6L3RSqmFAVPoEHaVo4ZxYKYOKxXsevqGnS1AMxHaZIIyUmZZvp8j9k2N7QENdi1KaGDMeIyCcZHFe0MhGniSTwZFF5gs6D4qnoaBdHDIEtC8DIbvkA0Q0vrweno_EOC703ah2UkPnp8=w1469-h979-no?authuser=0',

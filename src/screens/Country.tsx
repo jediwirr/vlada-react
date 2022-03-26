@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Gallery from '../components/Gallery';
 import Slider from '../components/Slider';
 
-const Country = () => {
-    const paths = [
+const Country: FC = () => {
+    const paths: string[] = [
         'https://lh3.googleusercontent.com/pw/AM-JKLUWgvzKVutMxdEo5oUCD9nmbMPByYT6XqvQbyccqANFnBnmBKncJol1Qn44jnPSzXkyn9M5GJlP31wgSQup0xyd0TnHHUM5Q333W85ofCrQdCZFqLYFhXKgCzLFhyyeda2DbppbthSiVSROKgE-Jpk3=w1469-h979-no?authuser=0',
 
         'https://lh3.googleusercontent.com/pw/AM-JKLUsBnQS_DyYX79fAhMmrnYsnOWe81CrurqUncUtupnDqe7jr0XZdlDeQSYkjjpueZrl0smbY3BviY-cZNGb45oxX3WFmV08TLEpNX0Lh22kKO6di1x5E0RYgGWxoXbfYXJ26xQWhAAhyoWWFu2o22wX=w1469-h979-no?authuser=0',

@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {FC, useState} from 'react';
 import {Link} from "react-router-dom";
 
-const Menu = () => {
-  const [isSubmenuShown, setSubmenuShown] = useState(false);
+const Menu: FC = () => {
+  const [isSubmenuShown, setSubmenuShown] = useState<boolean>(false);
 
   function toggleSubMenu(e) {
     e.preventDefault();

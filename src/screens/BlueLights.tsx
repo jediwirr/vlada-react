@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Gallery from '../components/Gallery';
 import Slider from '../components/Slider';
 
-const BlueLights = () => {
-    const paths = [
+const BlueLights: FC = () => {
+    const paths: string[] = [
         'https://lh3.googleusercontent.com/pw/AM-JKLU7QmQbBl-jHGBMT4UZ_MIqdJ7-xKVxBZV27Ry5d2VzOnVSKsiGs1QGqXacfKvwWMtkDdCAaXfC6xlrojJEJQZoDU4ABPaLnCfKDSSLYVOKpCuRCm8mOnRk6q3TA_AAUmL-FINDeL4MQPM7rkrL1B62=w1120-h980-no?authuser=0',
 
         'https://lh3.googleusercontent.com/pw/AM-JKLUpLYcHX0HFfOIt7gusC4b-T5Iy0SN8I5ZTRYX0KguVwMGd-Z81LD_-zSHnkDPtNdUz94C4M8niHsxBBUAldZAt1Hv7_sryWbsYqTQKVTgV6BQZ23mzDHFxuFkyFg5hiQ8hQcLjdoMlJyEKYA9SR7L4=w1920-h961-no?authuser=0',

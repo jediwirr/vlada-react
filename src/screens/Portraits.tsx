@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Gallery from '../components/Gallery';
 import Slider from '../components/Slider';
 
-const Portraits = () => {
-    const paths = [
+const Portraits: FC = () => {
+    const paths: string[] = [
         "https://www.youtube.com/embed/GQ12_rdx3vU",
         "https://www.youtube.com/embed/6JYiXI29syA",
         "https://www.youtube.com/embed/kC5e4bbPg7w",

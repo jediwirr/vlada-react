@@ -1,10 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, FC} from 'react';
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
 
-const Slider = ({paths, video}) => {
-    const [index, setIndex] = useState(0);
-    const [isNextShown, setNextShown] = useState(true);
-    const [isPrevShown, setPrevShown] = useState(true);
+type Props = {
+    paths: string[],
+    video?: boolean
+}
+
+const Slider: FC<Props> = ({paths, video}) => {
+    const [index, setIndex] = useState<number>(0);
+    const [isNextShown, setNextShown] = useState<boolean>(true);
+    const [isPrevShown, setPrevShown] = useState<boolean>(true);
 
     useEffect(() => {
         console.log(index)

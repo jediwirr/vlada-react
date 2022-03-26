@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Gallery from '../components/Gallery';
 import Slider from '../components/Slider';
 
-const Dostoevsky = () => {
-    const paths = [
+const Dostoevsky: FC = () => {
+    const paths: string[] = [
         'https://lh3.googleusercontent.com/pw/AM-JKLUjQ1PU6sJo4CH5uMgU8RF2qkOcrQwzChVynnpEeMkzgn4MWkGjpCYqg3XDiAVMDjXUdf1mfQmCg5Q-Nlci6Y1-gNAaGSrpTc1OMuT_TGPjIqBM1RcH-u_8G0TJT2bCq92XoD3aSaWQjnJSHQSgOtqC=w1118-h980-no?authuser=0',
 
         'https://lh3.googleusercontent.com/pw/AM-JKLWxsgS8Bb7eMDZycsMGsTgMVtGr0plQ6Qhd_jDCJAhbIYC8T-s60cpUg1DBYj3CE79iU2it8VTMqqctXeC0i4WCbZMzQioGTM3IFoN1dWc3TnB1CdDx1FANSyOnbXJmCdHy2N_XBOTdptSSTQzoc4sn=w784-h979-no?authuser=0',

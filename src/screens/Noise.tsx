@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Gallery from '../components/Gallery';
 import Slider from '../components/Slider';
 
-const About = () => {
-    const paths = [
-        "https://www.youtube.com/embed/XHT1Y0b64gc"
+const Noise: FC = () => {
+    const paths: string[] = [
+        "https://www.youtube.com/embed/W3Fty5A5I6o"
     ];
 
     return (
@@ -15,4 +15,4 @@ const About = () => {
     )
 }
 
-export default About;
+export default Noise;

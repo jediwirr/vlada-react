@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Gallery from '../components/Gallery';
 import Slider from '../components/Slider';
 
-const ZinVlada = () => {
-    const paths = [
+const ZinVlada: FC = () => {
+    const paths: string[] = [
         'https://lh3.googleusercontent.com/pw/AM-JKLWyr2aqCJlmbSvuMq-USniuPs-qa70-ttN7Z6X4CPYaBBgpkHqF_x_U_oODJ4J41G-7ojeaOB8Zr-gWOLKeLdwdC8m8_OasX_JnTUnyxb4qWBydvAI9NQRRCFMm2V_p5TqSXRmRltNO5K103_qAMr42=w1118-h980-no?authuser=0',
 
         'https://lh3.googleusercontent.com/pw/AM-JKLUWyyGa7FwU0hgSBk6aSZQsT5se2vUp2M1WLFkVdVqGsJAD4-Z_6su31n7Shd1eOuu9cXlCdNjcpcwA_eYg4AdaHQOB2hauYLatiQ_AQ_F8xTRJrrYduGTGCsYFiA0VvkpEngXnGmabHu_9MTjMM8As=w1377-h979-no?authuser=0',

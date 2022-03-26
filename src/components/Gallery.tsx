@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {FC, useState} from 'react';
 import Menu from '../components/Menu';
 import {Link} from "react-router-dom";
 
-const Gallery = () => {
-    const [menuIsShown, setMenuIsShown] = useState(false);
+const Gallery: FC = () => {
+    const [menuIsShown, setMenuIsShown] = useState<boolean>(false);
 
     function toggleMenu(e) {
         e.preventDefault();
