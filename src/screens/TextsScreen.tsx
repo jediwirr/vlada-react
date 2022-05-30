@@ -2,6 +2,7 @@ import React, { useState, useEffect, FC } from 'react';
 import Gallery from '../components/Gallery';
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
 import { Novel } from '../interfaces/novel';
+import { API_URL } from '../constants';
 
 const Texts: FC = () => {
     const [data, setData] = useState<Novel[]>([]);
@@ -9,7 +10,7 @@ const Texts: FC = () => {
     const [isShown, setIsShown] = useState<boolean>(true);
 
     useEffect(() => {
-        fetch('https://gimnazist.herokuapp.com/api/novels/')
+        fetch(`${API_URL}novels/`)
         .then(response => response.json())
         .then(response => {
           console.log(response)
@@ -32,8 +33,7 @@ const Texts: FC = () => {
                         {!data ? 'Loading... ' :
                             data.map((item: Novel, i: number) => (
                                 <p onClick={() => toggleMenu(item.title)}>{i + 1}. {item.title}</p>
-                            ))
-                        }
+                            ))}
                     </div> : <></>
                 }
                 <div className="MenuSideBar" onClick={() => setIsShown(!isShown)}>
@@ -46,17 +46,15 @@ const Texts: FC = () => {
                         data.map((item: Novel) => (
                             <>
                                 <p key={item.title} className="Title">{item.title === title ? item.title : ''}</p>
-                                {
-                                    item.content.split('\n').map(par => (
-                                        <p>{item.title === title ? par : ''}</p>
-                                    ))
-                                }
+                                {item.content.split('\n').map(par => (
+                                    <p>{item.title === title ? par : ''}</p>
+                                ))}
                             </>
                         ))
                     }
                 </div>
                 }
-        </div>
+            </div>
         </div>
     )
 }
