@@ -1,1 +1,1 @@
-export const API_URL = 'http://semaforoblu.ru/api/';
+export const API_URL = '/api/';
