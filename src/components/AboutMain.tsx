@@ -1,7 +1,8 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
+import { API_URL } from "../constants";
+import { IImage } from "../interfaces/image";
 
-const AboutMain: FC = () => {
-
+const AboutMain: FC = () => {   
     return (
         <div className="About-main">
             <div className="Portrait">

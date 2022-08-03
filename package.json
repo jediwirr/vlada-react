@@ -43,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://semaforoblu.ru"
+  "proxy": "http://localhost:8000"
 }
