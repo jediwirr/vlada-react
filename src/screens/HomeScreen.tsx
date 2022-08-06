@@ -1,31 +1,28 @@
 import React, { FC, useEffect, useState } from 'react';
 import AboutMain from '../components/AboutMain';
 import Menu from '../components/Menu';
-import { API_URL } from '../constants';
+import { API_URL } from '../services/constants';
 import { IImage } from '../interfaces/image';
 
 const Home: FC = () => {
-    const [mainImage, setMainImage] = useState<string>('');
+    const [images, setImages] = useState<IImage[]>([]);
 
     const getImages = async () => {
-        const images = await (await fetch(`${API_URL}images`)).json();
-        const requiredImage = images.find((item: IImage) => item.category === 'main');
-        setMainImage(requiredImage.photo);
+        const album = await (await fetch(`${API_URL}albums/1`)).json();
+        setImages(album.images);
     };
 
     useEffect(() => {
         getImages();
     }, []);
 
-    // https://lh3.googleusercontent.com/pw/AM-JKLVfI9sqdBqabNU9rKIrKS0KjUI7d--pKO4-FR_LPtYSCEcxyGsbzIOrDslOC5MHoufmW_aRcxKrmwtlhoMWgnMdaBXk5vY_WoYXJ_9qUchAUhJMJgZtoR-lA7OFg1y-YkAcwvbW-Cg-t35WrNEXJGQO=w1000-h665-no?authuser=0
-
   return (
     <div className="Home">
         <div className="Photo-main">
-        <img src={mainImage} alt="VLADA"/>
+        <img src={images[0]?.photo} alt="VLADA"/>
         </div>
         <Menu />
-        <AboutMain />
+        <AboutMain imagePath={images[1]?.photo} />
     </div>
   );
 }

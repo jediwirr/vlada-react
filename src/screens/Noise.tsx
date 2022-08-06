@@ -10,7 +10,7 @@ const Noise: FC = () => {
     return (
         <div className="Gallery">
             <Gallery />
-            <Slider paths={paths} video={true} />
+            {/*<Slider images={images} video={true} />*/}
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect, FC } from 'react';
 import Gallery from '../components/Gallery';
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
 import { Novel } from '../interfaces/novel';
-import { API_URL } from '../constants';
+import { API_URL } from '../services/constants';
 
 const Texts: FC = () => {
     const [data, setData] = useState<Novel[]>([]);

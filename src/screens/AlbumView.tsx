@@ -1,16 +1,19 @@
 import React, { FC } from 'react';
 import Gallery from '../components/Gallery';
 import Slider from '../components/Slider';
-import { paths } from '../data/BlueLights/paths';
+import { IAlbum } from '../interfaces/album';
 
-const BlueLights: FC = () => {
+type Props = {
+    album: IAlbum;
+};
 
+const AlbumView: FC<Props> = ({ album }) => {
     return (
         <div className="Gallery">
             <Gallery />
-            <Slider paths={paths} />
+            <Slider images={album?.images} />
         </div>
-    )
-}
+    );
+};
 
-export default BlueLights;
+export default AlbumView;

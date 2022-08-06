@@ -1,12 +1,14 @@
-import React, { FC, useEffect, useState } from "react";
-import { API_URL } from "../constants";
-import { IImage } from "../interfaces/image";
+import React, { FC } from "react";
 
-const AboutMain: FC = () => {   
+type Props = {
+    imagePath: string;
+}
+
+const AboutMain: FC<Props> = ({ imagePath }) => {  
     return (
         <div className="About-main">
             <div className="Portrait">
-                <img src="https://lh3.googleusercontent.com/pw/AM-JKLX7dTZ6AGUuiFGKrfjlsseFpngFggqCcscMfe9-DkD5qmoII9XKK478vHg5YXwqMzhgnBxF4-NmpBpAiL27V84I_gVZZvdfc2RKLmNIEOuhqwLqHsKOGIJMVAN_2352DrRSXRNFYNiDse1ZgpARLphO=s600-no?authuser=0" alt="portrait"/>
+                <img src={imagePath} alt="portrait"/>
             </div>
 
             <div>
