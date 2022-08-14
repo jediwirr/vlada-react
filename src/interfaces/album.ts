@@ -1,7 +1,7 @@
-import { IImage } from "./image";
+import { IFile } from "./file";
 
 export interface IAlbum {
     pk: number;
     title: string;
-    images: IImage[];
+    files: IFile[]
 }

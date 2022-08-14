@@ -1,17 +1,18 @@
 import React, { FC } from 'react';
-import Gallery from '../components/Gallery';
+import GalleryHeader from '../components/GalleryHeader';
 import Slider from '../components/Slider';
 import { IAlbum } from '../interfaces/album';
 
 type Props = {
     album: IAlbum;
+    video?: boolean;
 };
 
-const AlbumView: FC<Props> = ({ album }) => {
+const AlbumView: FC<Props> = ({ album, video }) => {
     return (
         <div className="Gallery">
-            <Gallery />
-            <Slider images={album?.images} />
+            <GalleryHeader />
+            <Slider items={album?.files} video={video} />
         </div>
     );
 };

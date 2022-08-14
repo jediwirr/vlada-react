@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FC } from 'react';
-import Gallery from '../components/Gallery';
+import GalleryHeader from '../components/GalleryHeader';
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
 import { Novel } from '../interfaces/novel';
 import { API_URL } from '../services/constants';
@@ -26,7 +26,7 @@ const Texts: FC = () => {
 
     return (
         <div className="Gallery">
-            <Gallery />
+            <GalleryHeader />
             <div className="Texts">
                 {isShown ?
                     <div className="Texts-menu">

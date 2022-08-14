@@ -1,8 +1,8 @@
 import React, {FC, useState} from 'react';
-import Menu from '../components/Menu';
+import Menu from './Menu';
 import {Link} from "react-router-dom";
 
-const Gallery: FC = () => {
+const GalleryHeader: FC = () => {
     const [menuIsShown, setMenuIsShown] = useState<boolean>(false);
 
     function toggleMenu(e) {
@@ -21,10 +21,10 @@ const Gallery: FC = () => {
             {
                 menuIsShown
                 ? <Menu />
-                : ''
+                : null
             }
         </>
     )
 }
 
-export default Gallery;
+export default GalleryHeader;

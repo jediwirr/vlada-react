@@ -5,31 +5,30 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Noise from '../screens/Noise';
-import About from '../screens/About';
 import Texts from '../screens/TextsScreen';
 import AlbumView from '../screens/AlbumView';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAlbums } from '../store/actions';
+import { getAlbums, getVideoAlbums } from '../store/actions';
 import { AppDispatch } from '../store';
-import { albumsSelector } from '../store/selectors';
+import { albumsSelector, videoAlbumsSelector } from '../store/selectors';
 import { IAlbum } from '../interfaces/album';
 
 const AppRouter = () => {
     const dispatch: AppDispatch = useDispatch();
-    const albums: IAlbum[] = useSelector(albumsSelector);
+    const imageAlbums: IAlbum[] = useSelector(albumsSelector);
+    const videoAlbums: IAlbum[] = useSelector(videoAlbumsSelector);
 
     useEffect(() => {
         dispatch(getAlbums());
+        dispatch(getVideoAlbums());
     }, []);
-
 
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
             <Route path="/" element={<Home />} />
-            {albums?.map(item => (
+            {imageAlbums?.map(item => (
                 <Route 
                     key={item.pk} 
                     path={`/albums/${item.pk}`} 
@@ -38,8 +37,15 @@ const AppRouter = () => {
                     } 
                 />
             ))}
-            <Route path="/noise" element={<Noise />} />
-            <Route path="/about" element={<About />} />
+            {videoAlbums?.map(item => (
+                <Route
+                    key={item.pk}
+                    path={`/videoalbums/${item.pk}`}
+                    element={
+                        <AlbumView album={item} video />
+                    }
+                />
+            ))}
             <Route path="/texts" element={<Texts />} />
           </Routes>
       </div>
