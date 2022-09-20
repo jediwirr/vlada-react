@@ -1,6 +1,7 @@
 import React, {FC, useState} from 'react';
 import { useSelector } from 'react-redux';
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
+
 import { IAlbum } from '../interfaces/album';
 import { albumsSelector, videoAlbumsSelector } from '../store/selectors';
 
@@ -16,42 +17,42 @@ const Menu: FC = () => {
 
   const SubMenu = () => (
     <div className="Menu">
-        <Link to="/bluegreen">ГОЛУБО-ЗЕЛЁНЫЙ</Link>
-        <Link to="/country">ДАЧА</Link>
-        <Link to="/pastel">ПАСТЕЛЬ</Link>
-        <Link to="/pasteltwo">ПАСТЕЛЬ 2</Link>
-        <Link to="/" onClick={toggleSubMenu}>НАЗАД</Link>
+      <Link to="/bluegreen">ГОЛУБО-ЗЕЛЁНЫЙ</Link>
+      <Link to="/country">ДАЧА</Link>
+      <Link to="/pastel">ПАСТЕЛЬ</Link>
+      <Link to="/pasteltwo">ПАСТЕЛЬ 2</Link>
+      <Link to="/" onClick={toggleSubMenu}>НАЗАД</Link>
     </div>
-  )
+  );
 
 
   const MainMenu = () => (
-      <div className="Menu">
-          {imageAlbums?.map((item: IAlbum) => item.pk > 1 && (
-            <Link to={`/albums/${item.pk}`}>
-                {item.title.toUpperCase()}
-            </Link>
-          ))}
-          <Link to="/texts">ТЕКСТЫ</Link>
-          {videoAlbums?.map((item: IAlbum) => (
-            <Link to={`/videoalbums/${item.pk}`}>
-                {item.title.toUpperCase()}
-            </Link>
-          ))}
-          {/*<Link to="/" onClick={toggleSubMenu}>ФОТОСЕРИИ</Link>*/}
-      </div>
-  )
+    <div className="Menu">
+      {imageAlbums?.map((item: IAlbum) => item.pk > 1 && (
+        <Link to={`/albums/${item.pk}`}>
+          {item.title.toUpperCase()}
+        </Link>
+      ))}
+      <Link to="/texts">ТЕКСТЫ</Link>
+      {videoAlbums?.map((item: IAlbum) => (
+        <Link to={`/videoalbums/${item.pk}`}>
+          {item.title.toUpperCase()}
+        </Link>
+      ))}
+      {/*<Link to="/" onClick={toggleSubMenu}>ФОТОСЕРИИ</Link>*/}
+    </div>
+  );
 
   return (
     <>
       {
         isSubmenuShown
-        ? <SubMenu />
-        : <MainMenu />
+          ? <SubMenu />
+          : <MainMenu />
       }
     </>
-  )
-}
+  );
+};
 
 export default Menu;
 
