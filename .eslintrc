@@ -4,7 +4,6 @@
     "react-app/jest"
   ],
   "rules": {
-    "react/jsx-filename-extension": ["error", { "extensions": [".ts", ".tsx"] }],
     "no-console": "warn",
     "prefer-const": "error",
     "quotes": ["error", "single"],

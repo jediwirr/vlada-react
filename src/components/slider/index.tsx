@@ -1,7 +1,9 @@
 import React, { useState, useEffect, FC } from 'react';
 import { HiChevronRight, HiChevronLeft } from 'react-icons/hi';
 
-import { IFile } from '../interfaces/file';
+import { IFile } from '../../interfaces/file';
+
+import * as S from './styles';
 
 type Props = {
   items: IFile[];
@@ -11,7 +13,7 @@ type Props = {
 const Slider: FC<Props> = ({ items, video }) => {
   const [index, setIndex] = useState<number>(0);
   const [isNextShown, setNextShown] = useState<boolean>(true);
-  const [isPrevShown, setPrevShown] = useState<boolean>(true);
+  const [isPrevShown, setPrevShown] = useState<boolean>(false);
 
   useEffect(() => {
     if (index === 0) {
@@ -36,15 +38,15 @@ const Slider: FC<Props> = ({ items, video }) => {
   };
 
   return (
-    <div className="Slider">
-      <div
-        className="Arrow"
-        style={isPrevShown ? { opacity: 1 } : { opacity: 0 }}
+    <S.Slider>
+      <S.Shevron
+        shevronSide="left"
+        isPrevShown={isPrevShown}
         onClick={prevSlide}
       >
         <HiChevronLeft />
-      </div>
-      <div className="Slide">
+      </S.Shevron>
+      <S.Slide>
         {video ? (
           //<iframe width="100%" height="100%" src={items[index]?.path} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           <video
@@ -60,15 +62,15 @@ const Slider: FC<Props> = ({ items, video }) => {
         ) : (
           <img src={items[index]?.path} alt="slide"></img>
         )}
-      </div>
-      <div
-        className="Arrow"
-        style={isNextShown ? { opacity: 1 } : { opacity: 0 }}
+      </S.Slide>
+      <S.Shevron
+        shevronSide="right"
+        isNextShown={isNextShown}
         onClick={nextSlide}
       >
         <HiChevronRight />
-      </div>
-    </div>
+      </S.Shevron>
+    </S.Slider>
   );
 };
 

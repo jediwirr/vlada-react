@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import GalleryHeader from '../components/GalleryHeader';
-import Slider from '../components/Slider';
+import GalleryHeader from '../components/gallery-header';
+import Slider from '../components/slider';
 import { IAlbum } from '../interfaces/album';
 
 type Props = {

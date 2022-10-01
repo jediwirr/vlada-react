@@ -2,7 +2,9 @@ import React, {FC, useState} from 'react';
 
 import {Link} from 'react-router-dom';
 
-import Menu from './Menu';
+import Menu from '../menu';
+
+import * as S from './styles';
 
 const GalleryHeader: FC = () => {
   const [menuIsShown, setMenuIsShown] = useState<boolean>(false);
@@ -14,11 +16,11 @@ const GalleryHeader: FC = () => {
     
   return (
     <>
-      <div className="Header">
+      <S.Header>
         <a href="/gallery" onClick={toggleMenu}>WORKS</a>
         <span>VLADA</span>
         <Link to="/">ABOUT</Link>
-      </div>
+      </S.Header>
 
       {
         menuIsShown

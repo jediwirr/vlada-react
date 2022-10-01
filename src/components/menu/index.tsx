@@ -2,8 +2,8 @@ import React, {FC, useState} from 'react';
 import { useSelector } from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import { IAlbum } from '../interfaces/album';
-import { albumsSelector, videoAlbumsSelector } from '../store/selectors';
+import { IAlbum } from '../../interfaces/album';
+import { albumsSelector, videoAlbumsSelector } from '../../store/selectors';
 
 const Menu: FC = () => {
   const [isSubmenuShown, setSubmenuShown] = useState<boolean>(false);

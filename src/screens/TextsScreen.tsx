@@ -2,7 +2,7 @@ import React, { useState, useEffect, FC } from 'react';
 
 import { HiChevronRight, HiChevronLeft } from 'react-icons/hi';
 
-import GalleryHeader from '../components/GalleryHeader';
+import GalleryHeader from '../components/gallery-header';
 import { Novel } from '../interfaces/novel';
 import { API_URL } from '../services/constants';
 
@@ -15,10 +15,9 @@ const Texts: FC = () => {
     fetch(`${API_URL}novels/`)
       .then(response => response.json())
       .then(response => {
-        console.log(response);
         setData(response);
       })
-      .catch(error => console.log(error));
+      .catch(error => console.warn(error));
   }, []);
 
   const toggleMenu = (title) => {
@@ -36,13 +35,13 @@ const Texts: FC = () => {
               data.map((item: Novel, i: number) => (
                 <p onClick={() => toggleMenu(item.title)}>{i + 1}. {item.title}</p>
               ))}
-          </div> : <></>
+          </div> : null
         }
         <div className="MenuSideBar" onClick={() => setIsShown(!isShown)}>
           {isShown ? <HiChevronLeft /> : <HiChevronRight />}
         </div>
         {isShown ?
-          <></> :
+          null :
           <div className="Texts-content">
             {!data ? 'Loading... ' :
               data.map((item: Novel) => (

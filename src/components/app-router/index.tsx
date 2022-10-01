@@ -8,15 +8,15 @@ import {
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import Home from '../screens/HomeScreen';
-import Texts from '../screens/TextsScreen';
-import AlbumView from '../screens/AlbumView';
+import Home from '../../screens/HomeScreen';
+import Texts from '../../screens/TextsScreen';
+import AlbumView from '../../screens/AlbumView';
 
 
-import { getAlbums, getVideoAlbums } from '../store/actions';
-import { AppDispatch } from '../store';
-import { albumsSelector, videoAlbumsSelector } from '../store/selectors';
-import { IAlbum } from '../interfaces/album';
+import { getAlbums, getVideoAlbums } from '../../store/actions';
+import { AppDispatch } from '../../store';
+import { albumsSelector, videoAlbumsSelector } from '../../store/selectors';
+import { IAlbum } from '../../interfaces/album';
 
 const AppRouter = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -26,7 +26,7 @@ const AppRouter = () => {
   useEffect(() => {
     dispatch(getAlbums());
     dispatch(getVideoAlbums());
-  }, []);
+  }, [dispatch]);
 
   return (
     <BrowserRouter>

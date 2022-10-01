@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
 
-import AboutMain from '../components/AboutMain';
-import Menu from '../components/Menu';
+import AboutMain from '../components/about-main';
+import Menu from '../components/menu';
 import { IFile } from '../interfaces/file';
 import { API_URL } from '../services/constants';
 
