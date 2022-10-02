@@ -5,6 +5,11 @@ class AlbumsService {
     const response = await (await fetch(`${API_URL}albums`)).json();
     return response;
   }
+
+  async fetchParentAlbums() {
+    const response = await (await fetch(`${API_URL}parentalbums`)).json();
+    return response;
+  }
 }
 
 const albumsService = new AlbumsService();

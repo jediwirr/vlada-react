@@ -13,7 +13,7 @@ import Texts from '../../screens/TextsScreen';
 import AlbumView from '../../screens/AlbumView';
 
 
-import { getAlbums, getVideoAlbums } from '../../store/actions';
+import { getAlbums, getParentAlbums, getVideoAlbums } from '../../store/actions';
 import { AppDispatch } from '../../store';
 import { albumsSelector, videoAlbumsSelector } from '../../store/selectors';
 import { IAlbum } from '../../interfaces/album';
@@ -26,6 +26,7 @@ const AppRouter = () => {
   useEffect(() => {
     dispatch(getAlbums());
     dispatch(getVideoAlbums());
+    dispatch(getParentAlbums());
   }, [dispatch]);
 
   return (

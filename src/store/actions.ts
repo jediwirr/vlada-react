@@ -10,6 +10,13 @@ export const getAlbums = createAsyncThunk(
   },
 );
 
+export const getParentAlbums = createAsyncThunk(
+  'albums/getParentAlbums',
+  async (_, thunkAPI) => {
+    return await albumsService.fetchParentAlbums();
+  },
+);
+
 export const getVideoAlbums = createAsyncThunk(
   'albums/getVideoAlbums',
   async (_, thunkAPI) => {

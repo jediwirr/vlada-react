@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 import { IAlbum } from '../../interfaces/album';
-import { getAlbums, getVideoAlbums } from '../actions';
+import { getAlbums, getParentAlbums, getVideoAlbums } from '../actions';
 
 export interface AlbumsState {
     albums: IAlbum[];
+    parentAlbums: IAlbum[];
     videoAlbums: IAlbum[],
     loading: boolean;
     error: string | null;
@@ -12,6 +13,7 @@ export interface AlbumsState {
 
 const initialState = {
   albums: [],
+  parentAlbums: [],
   videoAlbums: [],
   loading: false,
   error: null,
@@ -31,6 +33,17 @@ const albumsSlice = createSlice({
         state.error = null;
         state.loading = false;
         state.albums = action.payload;
+      });
+
+    builder
+      .addCase(getParentAlbums.pending, (state) => {
+        state.error = null;
+        state.loading = true;
+      })
+      .addCase(getParentAlbums.fulfilled, (state, action) => {
+        state.error = null;
+        state.loading = false;
+        state.parentAlbums = action.payload;
       });
 
     builder
